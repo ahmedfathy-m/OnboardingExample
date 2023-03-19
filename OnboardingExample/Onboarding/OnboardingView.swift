@@ -9,28 +9,29 @@ import SwiftUI
 
 struct OnboardingView: View {
     @State var currentPage: Int = 0
+    var onboardingPages: [OnboardingModel]
     var body: some View {
         GeometryReader { proxy in
             VStack (spacing: 50) {
                 Spacer()
-                Image(OnboardingModel.all[currentPage].image)
+                Image(onboardingPages[currentPage].image)
                     .resizable()
                     .scaledToFit()
                     .frame(height: proxy.size.width)
                     .padding(.horizontal, 15)
                     .animation(.spring(), value: currentPage)
-                Text(OnboardingModel.all[currentPage].title)
+                Text(onboardingPages[currentPage].title)
                     .font(.system(size: 27))
                     .fontWeight(.bold)
                     .foregroundColor(.blue)
                     .animation(.spring(), value: currentPage)
-                Text(OnboardingModel.all[currentPage].body)
+                Text(onboardingPages[currentPage].body)
                     .font(.system(size: 14))
                     .fontWeight(.light)
                     .foregroundColor(.gray)
                     .animation(.spring(), value: currentPage)
                 Group {
-                    if currentPage == OnboardingModel.all.count - 1 {
+                    if currentPage == onboardingPages.count - 1 {
                         Button {
                             print("Completed")
                         } label: {
@@ -46,7 +47,7 @@ struct OnboardingView: View {
                         }
 
                     } else {
-                        PageControl(currentPage: $currentPage, totalPages: OnboardingModel.all.count)
+                        PageControl(currentPage: $currentPage, totalPages: onboardingPages.count)
                     }
                 }.transition(.opacity)
                     .animation(.spring(), value: currentPage)
@@ -55,7 +56,7 @@ struct OnboardingView: View {
                 DragGesture()
                     .onEnded { value in
                         if value.translation.width > 0 {
-                            if currentPage != OnboardingModel.all.count - 1 { currentPage += 1 }
+                            if currentPage != onboardingPages.count - 1 { currentPage += 1 }
                         } else if value.translation.width < 0 {
                             if currentPage != 0 { currentPage -= 1 }
                         }
@@ -67,6 +68,6 @@ struct OnboardingView: View {
 
 struct OnboardingView_Previews: PreviewProvider {
     static var previews: some View {
-        OnboardingView()
+        OnboardingView(onboardingPages: OnboardingModel.all)
     }
 }
