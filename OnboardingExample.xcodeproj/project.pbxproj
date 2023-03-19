@@ -14,6 +14,9 @@
 		8CA80CA729C7254E004D3E16 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA80CA629C7254E004D3E16 /* OnboardingView.swift */; };
 		8CA80CA929C72925004D3E16 /* OnboardingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA80CA829C72925004D3E16 /* OnboardingModel.swift */; };
 		8CA80CAB29C72A1D004D3E16 /* PageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA80CAA29C72A1D004D3E16 /* PageControl.swift */; };
+		8CA80CAE29C73C6F004D3E16 /* GIFImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA80CAD29C73C6F004D3E16 /* GIFImage.swift */; };
+		8CA80CB029C73F11004D3E16 /* poke-ball.gif in Resources */ = {isa = PBXBuildFile; fileRef = 8CA80CAF29C73F11004D3E16 /* poke-ball.gif */; };
+		8CA80CB229C73F57004D3E16 /* pika.gif in Resources */ = {isa = PBXBuildFile; fileRef = 8CA80CB129C73F57004D3E16 /* pika.gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +28,9 @@
 		8CA80CA629C7254E004D3E16 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		8CA80CA829C72925004D3E16 /* OnboardingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingModel.swift; sourceTree = "<group>"; };
 		8CA80CAA29C72A1D004D3E16 /* PageControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageControl.swift; sourceTree = "<group>"; };
+		8CA80CAD29C73C6F004D3E16 /* GIFImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GIFImage.swift; sourceTree = "<group>"; };
+		8CA80CAF29C73F11004D3E16 /* poke-ball.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "poke-ball.gif"; sourceTree = "<group>"; };
+		8CA80CB129C73F57004D3E16 /* pika.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = pika.gif; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +63,9 @@
 		8CA80C9629C72527004D3E16 /* OnboardingExample */ = {
 			isa = PBXGroup;
 			children = (
+				8CA80CB129C73F57004D3E16 /* pika.gif */,
+				8CA80CAF29C73F11004D3E16 /* poke-ball.gif */,
+				8CA80CAC29C73C57004D3E16 /* GIF */,
 				8CA80CA529C72534004D3E16 /* Onboarding */,
 				8CA80C9729C72527004D3E16 /* OnboardingExampleApp.swift */,
 				8CA80C9929C72527004D3E16 /* ContentView.swift */,
@@ -82,6 +91,14 @@
 				8CA80CAA29C72A1D004D3E16 /* PageControl.swift */,
 			);
 			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		8CA80CAC29C73C57004D3E16 /* GIF */ = {
+			isa = PBXGroup;
+			children = (
+				8CA80CAD29C73C6F004D3E16 /* GIFImage.swift */,
+			);
+			path = GIF;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,6 +160,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8CA80C9F29C7252B004D3E16 /* Preview Assets.xcassets in Resources */,
+				8CA80CB229C73F57004D3E16 /* pika.gif in Resources */,
+				8CA80CB029C73F11004D3E16 /* poke-ball.gif in Resources */,
 				8CA80C9C29C7252B004D3E16 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -154,6 +173,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CA80CAE29C73C6F004D3E16 /* GIFImage.swift in Sources */,
 				8CA80CAB29C72A1D004D3E16 /* PageControl.swift in Sources */,
 				8CA80CA929C72925004D3E16 /* OnboardingModel.swift in Sources */,
 				8CA80CA729C7254E004D3E16 /* OnboardingView.swift in Sources */,
