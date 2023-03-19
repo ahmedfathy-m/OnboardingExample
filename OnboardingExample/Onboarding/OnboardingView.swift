@@ -10,6 +10,7 @@ import SwiftUI
 struct OnboardingView: View {
     @State var currentPage: Int = 0
     var onboardingPages: [OnboardingModel]
+    var onEnd: ()->()
     var body: some View {
         GeometryReader { proxy in
             VStack (spacing: 50) {
@@ -33,7 +34,7 @@ struct OnboardingView: View {
                 Group {
                     if currentPage == onboardingPages.count - 1 {
                         Button {
-                            print("Completed")
+                            onEnd()
                         } label: {
                             ZStack {
                                 Capsule(style: .continuous)

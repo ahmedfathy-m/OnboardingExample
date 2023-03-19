@@ -9,7 +9,10 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        OnboardingView(onboardingPages: OnboardingModel.all)
+//        OnboardingView(onboardingPages: OnboardingModel.all)
+        OnboardingView(onboardingPages: OnboardingModel.all) {
+            print("Completed")
+        }
     }
 }
 
